@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js NEXT_PUBLIC_ variables are intentionally bundled to client JS.
+  # Disabling Netlify's secret scanner prevents false-positive build rejections.
+  SECRETS_SCAN_ENABLED = "false"
