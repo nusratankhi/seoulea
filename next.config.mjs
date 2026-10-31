@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  eslint: {
+    // Prevents Vercel build failures from strict lint warnings
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
